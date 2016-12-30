@@ -1,0 +1,21 @@
+{
+  "name": "MySchool",
+  "description": "MySchool: An Ionic project",
+  "main": "",
+  "authors": [
+    "Giovanni Torsello"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pouchdb": "^6.1.0"
+  }
+}
