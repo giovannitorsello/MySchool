@@ -1,0 +1,77 @@
+<!--
+  Generated template for the AnagraficaPersonaFisica page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Inserimento anagrafica persona fisica</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    
+    <form  (ngSubmit)="save()"  #AnagraficaPersonaFisicaForm="ngForm">
+      <div>
+          <div><label for="role">Ruolo</label></div>
+          <div>
+              <select id="role" required [(ngModel)]="persona_fisica.role" [ngModelOptions]="{standalone: true}">
+                <option value="Studente">Studente</option>
+                <option value="Genitore">Genitore</option>
+                <option value="Docente">Docente</option>
+              </select>
+          </div>
+      </div>      
+      <div>
+          <div><label for="nome">Nome</label></div>
+          <div><input type="text" class="form-control" id="nome" required [(ngModel)]="persona_fisica.nome" [ngModelOptions]="{standalone: true}"></div>
+      </div>
+      <div class="form-group">
+        <div><label for="cognome">Cognome</label></div>
+        <div><input type="text" class="form-control" id="cognome" required [(ngModel)]="persona_fisica.cognome" [ngModelOptions]="{standalone: true}"></div>
+      </div>
+      <div class="form-group">
+        <div><label for="codfis">Codice Fiscale</label></div>
+        <div><input type="text" class="form-control" id="codfis" required [(ngModel)]="persona_fisica.codfis"  [ngModelOptions]="{standalone: true}"></div>
+      </div>
+      <div class="form-group">
+        <div><label for="domicilio_comune">Comune del domicilio</label></div>
+        <div><input type="text" class="form-control" id="domicilio_comune" required [(ngModel)]="persona_fisica.domicilio_comune" [ngModelOptions]="{standalone: true}"></div>
+      </div>
+      <div class="form-group">
+        <div><label for="domicilio_indirizzo">Indirizzo del Domicilio</label></div>
+        <div><input type="text" class="form-control" id="domicilio_indirizzo" required [(ngModel)]="persona_fisica.domicilio_indirizzo" [ngModelOptions]="{standalone: true}"></div>
+      </div>
+      <div class="form-group">
+        <div><label for="residenza_comune">Comune del domicilio</label></div>
+        <div><input type="text" class="form-control" id="residenza_comune" required [(ngModel)]="persona_fisica.residenza_comune" [ngModelOptions]="{standalone: true}"></div>
+      </div>
+      <div class="form-group">
+        <div><label for="residenza_indirizzo">Indirizzo di residenza</label></div>
+        <div><input type="text" class="form-control" id="residenza_indirizzo" required [(ngModel)]="persona_fisica.residenza_indirizzo" [ngModelOptions]="{standalone: true}"></div>
+      </div>        
+      <div class="form-group">
+        <div><label for="email">Email</label></div>
+        <div><input type="text" class="form-control" id="email"  required [(ngModel)]="persona_fisica.email" [ngModelOptions]="{standalone: true}"></div>
+      </div>
+       
+       <div class="form-group">
+        <div><label for="Mobile">Telefono mobile (smartphone)</label></div>
+       <div><input type="text" class="form-control" id="mobile"  required [(ngModel)]="persona_fisica.mobile" [ngModelOptions]="{standalone: true}"></div>
+       </div>
+       
+      <div class="form-group">
+        <div><label for="telefono">Telefono</label></div>
+        <div><input type="text" class="form-control" id="telefono" [(ngModel)]="persona_fisica.telefono" [ngModelOptions]="{standalone: true}"></div>
+      </div>
+              
+      <button type="button" class="btn btn-default" (click)="save()" [disabled]="!AnagraficaPersonaFisicaForm.form.valid"" >Salva</button>
+      <button type="button" class="btn btn-default" (click)="clear()">Nuovo</button>
+      
+    </form>
+   
+</ion-content>

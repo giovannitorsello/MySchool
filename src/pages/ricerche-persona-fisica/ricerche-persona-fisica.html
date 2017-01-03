@@ -1,0 +1,34 @@
+<!--
+  Generated template for the RicerchePersonaFisica page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>RicerchePersonaFisica</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ <p>Ricerca persona</p>
+ <button class="button button-open" (click)="inserisci_persona_fisica($event)">Inserimento</button> 
+
+  <label class="item-input-wrapper">
+    <i class="icon ion-ios7-search placeholder-icon"></i>
+      <input type="search" placeholder="Search" [ngModel]="key_search" (ngModelChange)="search_persona_fisica($event)">
+  </label>
+  <button class="button button-clear">Cancel</button> 
+
+	<ion-list>		
+			<button ion-item *ngFor="let persona of listaPersone" (click)="open_persona_fisica($event, persona)">									
+      			{{persona.nome}}, 	{{persona.cognome}} 
+      			<div class="item-note" item-right>
+      			{{persona.codfis}}, {{persona.domicilio_comune}}, {{persona.domicilio_indirizzo}}, {{persona.telefono_mobile}}, {{persona.email}}
+      		</div>
+    	</button>		
+	</ion-list>
+</ion-content>
